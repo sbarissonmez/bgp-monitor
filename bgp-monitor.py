@@ -34,7 +34,7 @@ Subject: Change Detected by BGP Monitor
 
 The script bgp-monitor.py has detected a change in the BGP routes being learned.
 
-Please check BGP peers on %s (%s).
+Please verify BGP peers on %s (%s).
 
 Previous Route List: %s
 New Route List: %s
@@ -52,7 +52,7 @@ SENT FROM %s
 
 def checkBGP():
     with open(logfile, 'ab') as a:
-        a.write("Running BGP Control Script at: %s \n" % timestamp)
+        a.write("Running BGP Monitor Script at: %s \n" % timestamp)
     try:
         dev.open()
         with open(logfile, 'ab') as a:
