@@ -36,12 +36,12 @@ The script bgp-monitor.py has detected a change in the BGP routes being learned.
 
 Please verify BGP peers on %s (%s).
 
-Previous Route List: %s
-New Route List: %s
+Earlier Route List: %s
+Updated Route List: %s
 
 Status: %s
 
-Alert generated at %s
+Alert triggered at %s
 
 SENT FROM %s
     """ % (fromName, fromAddr, toName, toAddr, deviceName, deviceIP,
