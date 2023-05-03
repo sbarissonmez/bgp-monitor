@@ -52,14 +52,14 @@ SENT FROM %s
 
 def checkBGP():
     with open(logfile, 'ab') as a:
-        a.write("Running BGP Monitor Script at: %s \n" % timestamp)
+        a.write("Execute BGP Monitor at: %s \n" % timestamp)
     try:
         dev.open()
         with open(logfile, 'ab') as a:
             a.write("Connected to %s \n" % deviceIP)
     except:
         with open(logfile, 'ab') as a:
-            a.write("ERR: FAILED TO CONNECTION TO %s \n" % deviceIP)
+            a.write("ERR: CONNECTION ERROR: FAILED TO CONNECT TO %s \n" % deviceIP)
         sys.exit(0)
 
     allroutes = RouteTable(dev)
